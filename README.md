@@ -1,4 +1,8 @@
-# Requirements
+# User Stories and Requirements
+
+🐿️ As a user, I want to be able to click the cookie and increment the counter
+🐿️ As a user, I want to see the counter automatically increment using an interval timer
+🐿️ As a user, I want to purchase items i can afford in the shop and increase the number of cookies every time the interval passes
 
 🎯 Create state variables to store the current number of cookies and the cookies PerSecond value (useState)
 
@@ -13,21 +17,22 @@
 (Required)
 🎯 Please mention the requirements you met and which goals you achieved for this assignment.
 
-- I think I met the base requirements, however I was short on time this weekend and even with the extension I'm not happy that I couldn't try any stretch goals.
+- I think I met the base requirements, however I was extremely short on time this weekend and even with the extension I'm not happy that I couldn't try any stretch goals.
 
 🎯 Were there any requirements or goals that you were not quite able to achieve?
 
-- no
+- Aside from stretch goals no.
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
 
-- I found passing props really difficult
+- I found passing props really difficult to conceptualise, I also found the little idiosyncrasies of React a little frustrating as some of them are not very logical at first glance. For example the many callback functions in the timer component. I know there is a reason for them, but it's hard to remember the code.
 
 # wireframe
 
 ![Wireframe mobile view](image.png)
 
 - react component tree
+  ![Component tree](image-2.png)
 - lighthouse?
   ![Lighthouse on localhost](image-1.png)
 
@@ -36,7 +41,11 @@
 - 🏹 Feel free to add any other reflections you would like to share about your submission e.g.
 
 - What went really well and what could have gone better?
-- Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
-- Describing errors or bugs you encountered while completing your assignment.
 
--I wanted to try out compartmentalising the components with their CSS files but honestly it was sometimes difficult to keep track of them.
+Considering the time I had, I'm happy I made an app that has basic functionality. I would have loved to style it better, add more features etc. I really liked the component methodology in React and I hope to get much better at it. I still need to get more familiar with React in general
+
+- Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+
+The usual of Google, stackoverflow, GPT for debugging but this time I got a lot of help from Emily on the course since I was very short on time. Many thanks to her!
+
+- Describing errors or bugs you encountered while completing your assignment.

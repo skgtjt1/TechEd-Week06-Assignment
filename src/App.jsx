@@ -23,10 +23,11 @@ export default function App() {
   function stressClicker() {
     setClicked(true);
     setClicks((clicks) => clicks + 1); //skips needing return
-    console.log(clicks);
+    // console.log(clicks);
   }
 
   const incrementClicker = useCallback(() => {
+    //Emily suggested this, apparently it stops the increment functions from being re-rendered every time.
     setClicks((newClicks) => {
       const newTotal = newClicks + cps;
       return newTotal;
