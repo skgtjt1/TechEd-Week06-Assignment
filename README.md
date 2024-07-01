@@ -8,27 +8,28 @@
 
 🎯 Create a function to handle the purchase of an item. This should check if the user has enough cookies to purchase the item, and if so, subtract the cost of the item from the number of cookies and add the increment value to the cookiesPerSecond value.
 
-# Stretch Goals
-
-🏹 Store the cookies and cookiesPerSecond values in localStorage so they persist between page refreshes
-
-💭 You can load saved values from localStorage as the default value passed to the useState hook
-
-🏹 Retrieve data to populate your cookie upgrades from a third-party API using fetch and useEffect().
-https://cookie-upgrade-api.vercel.app/api/upgrades
-
 # Please also provide an assignment reflection in your project README.md file.
 
 (Required)
 🎯 Please mention the requirements you met and which goals you achieved for this assignment.
 
+- I think I met the base requirements, however I was short on time this weekend and even with the extension I'm not happy that I couldn't try any stretch goals.
+
 🎯 Were there any requirements or goals that you were not quite able to achieve?
+
+- no
 
 🎯 If so, could you please tell us what was it that you found difficult about these tasks?
 
-- wireframe
+- I found passing props really difficult
+
+# wireframe
+
+![Wireframe mobile view](image.png)
+
 - react component tree
 - lighthouse?
+  ![Lighthouse on localhost](image-1.png)
 
 (Optional)
 
@@ -37,3 +38,5 @@ https://cookie-upgrade-api.vercel.app/api/upgrades
 - What went really well and what could have gone better?
 - Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
 - Describing errors or bugs you encountered while completing your assignment.
+
+-I wanted to try out compartmentalising the components with their CSS files but honestly it was sometimes difficult to keep track of them.

@@ -1,6 +1,10 @@
-import { useEffect } from "react";
 import "./App.css";
 import { useState } from "react";
+import Header from "./components/Header/Header";
+import Clicker from "./components/Clicker/Clicker";
+import Timer from "./components/Timer/Timer";
+import ShopDisplay from "./components/Shop/Shop";
+import { useCallback } from "react";
 
 //I need a list of shop upgrades for the user to buy
 
@@ -8,21 +12,51 @@ import { useState } from "react";
 
 // stretch goal, fetch API upgrades, maybe make my own API?
 
-const upgrades = [{}, {}];
+// const upgrades = [{}, {}];
 
 export default function App() {
-  const [biscuits, setBiscuits] = useState(0);
-  const [biscuitsPerSecond, setBiscuitsPerSecond] = useState(1);
+  const [clicks, setClicks] = useState(0);
+  const [cps, setCps] = useState(1);
+  const [clicked, setClicked] = useState(false);
+  //   //   //I need a timer to track the biscuits, keeping an eye on the bps
 
-  //I need a timer to track the biscuits, keeping an eye on the bps
+  function stressClicker() {
+    setClicked(true);
+    setClicks((clicks) => clicks + 1); //skips needing return
+    console.log(clicks);
+  }
 
-  useEffect(() => {
-    const biscuitInterval = setInterval(() => {}, 1000);
-  }, []);
+  const incrementClicker = useCallback(() => {
+    setClicks((newClicks) => {
+      const newTotal = newClicks + cps;
+      return newTotal;
+    });
+  }, [cps]);
+
+  function shopBuy(cost, increase) {
+    if (clicks >= cost) {
+      setClicks((newClicks) => newClicks - cost);
+      setCps((newCps) => newCps + increase);
+    }
+  }
 
   return (
-    <>
-      <h1>Main App</h1>
-    </>
+    <div className="main-page">
+      <Header />
+      <main className="main-container">
+        <Clicker click={stressClicker} />
+        <div className="count">
+          <br />
+          <h3>Bad vibes deposited:</h3>
+          <h2> {clicks}</h2>
+          <h3>Vibes per second:</h3>
+          <h2>{cps}</h2>
+        </div>
+        {clicked ? (
+          <Timer incrementClicker={incrementClicker} cps={cps} />
+        ) : null}
+        <ShopDisplay onPurchase={shopBuy} />
+      </main>
+    </div>
   );
 }

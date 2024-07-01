@@ -1,0 +1,29 @@
+.shop-front {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  overflow: auto;
+  max-height: 30vh;
+  width: fit-content;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+.upgrade-list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.listbox {
+  border: 3px solid black;
+  background-color: gold;
+}
+
+@media (min-width: 700px) {
+  .shop-front {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

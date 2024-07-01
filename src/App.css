@@ -1,0 +1,48 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count {
+  margin: 20px;
+  text-align: center;
+}
+
+.count h3 {
+  margin: 5px 0;
+}
+
+.count h2 {
+  margin: 5px 0;
+  font-size: 32px;
+  color: #333;
+}
+
+.game-desc {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
